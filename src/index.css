@@ -7,9 +7,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(../public/depositphotos_8138619.jpg) no-repeat center center
+    fixed;
+  /* background-size: cover; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }

@@ -1,0 +1,22 @@
+.form {
+  width: 320px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+/* .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+.button {
+  width: 100px;
+  margin-left: 0;
+}
+/* .label {
+  margin-left: 5px;
+  border-radius: 20px;
+} */
