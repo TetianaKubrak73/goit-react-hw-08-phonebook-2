@@ -1,12 +1,13 @@
-import { useAuth } from '../hooks/useAuth';
-import {
-  // Outlet,
-  Navigate,
-} from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Outlet, Navigate } from 'react-router-dom';
+import { selectIsLogin, selectToken } from '../redux/auth/auth-selectors';
+
 import Loader from './Loader/Loader';
 
 export const PrivateRoute = () => {
-  const { isLogin, token } = useAuth();
+  const isLogin = useSelector(selectIsLogin);
+  const token = useSelector(selectToken);
+
   if (!isLogin && token) {
     return <Loader />;
   }
@@ -15,7 +16,7 @@ export const PrivateRoute = () => {
     return <Navigate to="/login" />;
   }
 
-  //   return <Outlet />;
+  return <Outlet />;
 };
 
 export default PrivateRoute;

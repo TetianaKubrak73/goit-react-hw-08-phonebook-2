@@ -10,6 +10,6 @@ button {
   width: 80px;
   margin-left: 5px;
   border-radius: 5px;
-  background-color: rosybrown;
+  /* background-color: rosybrown; */
   cursor: pointer;
 }

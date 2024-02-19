@@ -7,7 +7,16 @@ form {
   width: 100px;
   margin-left: 0;
 }
-input {
+/* input {
   margin-left: 5px;
   border-radius: 20px;
+} */
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  width: 180px;
+}
+input {
+  margin-top: 10px;
 }

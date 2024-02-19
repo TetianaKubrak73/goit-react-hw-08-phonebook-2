@@ -4,7 +4,7 @@ import { addContacts } from '../../redux/contacts/contact-operations';
 import { selectContacts } from '../../redux/selector';
 import { useSelector, useDispatch } from 'react-redux';
 
-import style from './ContactForm.module.css';
+import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
   const [state, setState] = useState({
@@ -40,7 +40,6 @@ const ContactForm = () => {
       dispatch(
         addContacts({ id: nanoid(), name: state.name, number: state.number })
       );
-      // Сброс состояния формы
       reset();
     }
   };
@@ -58,7 +57,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor={nameInputId}>
+      <label htmlFor={nameInputId} className={styles.label}>
         Name
         <input
           type="text"
@@ -73,7 +72,7 @@ const ContactForm = () => {
         />
       </label>
 
-      <label htmlFor={numberInputId}>
+      <label htmlFor={numberInputId} className={styles.label}>
         Number
         <input
           type="tel"
@@ -88,7 +87,7 @@ const ContactForm = () => {
         />
       </label>
 
-      <button className={style.buttonAdd} type="submit">
+      <button className={styles.buttonAdd} type="submit">
         Add contact
       </button>
     </form>

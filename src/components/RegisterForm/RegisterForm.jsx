@@ -1,5 +1,3 @@
-import { useDispatch } from 'react-redux';
-import { signup } from '../../redux/auth/auth-operations';
 import { useState, useId } from 'react';
 import styles from './RegisterForm.module.css';
 
@@ -9,9 +7,9 @@ const INITIAL_STATE = {
   password: '',
 };
 
-const RegisterForm = () => {
+const RegisterForm = ({ onSubmit }) => {
   const [state, setState] = useState({ ...INITIAL_STATE });
-  const dispatch = useDispatch();
+
   const handleChange = ({ target }) => {
     const { name, value, type, checked } = target;
     const newValue = type === 'checkbox' ? checked : value;
@@ -24,7 +22,7 @@ const RegisterForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(signup(state));
+    onSubmit({ ...state });
     reset();
   };
 
@@ -65,7 +63,7 @@ const RegisterForm = () => {
             type="email"
             name="email"
             placeholder="Введіть адресу електронної пошти"
-            // pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+            pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             required
           />
         </label>
@@ -80,7 +78,7 @@ const RegisterForm = () => {
             type="password"
             name="password"
             placeholder="Введіть пароль"
-            // pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
+            pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
             required
           />
         </label>

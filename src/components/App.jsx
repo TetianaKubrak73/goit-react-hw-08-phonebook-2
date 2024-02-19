@@ -38,32 +38,3 @@ export const App = () => {
 };
 
 export default App;
-//   return (
-//     <div>
-//       <Routes>
-//         <Route path="/" element={<Layout />}>
-//           <Route index element={<Home />} />
-//           <Route
-//             path="/register"
-//             element={
-//               <PublicRoute redirectTo="/register" component={<Register />} />
-//             }
-//           />
-//           <Route
-//             path="/login"
-//             element={<PublicRoute redirectTo="/login" component={<Login />} />}
-//           />
-//           <Route
-//             path="/contacts"
-//             element={
-//               <PrivateRoute redirectTo="/contacts" component={<Contacts />} />
-//             }
-//           />
-//         </Route>
-//         <Route path="*" element={<Navigate to="/" />} />
-//       </Routes>
-//     </div>
-//   );
-// };
-
-// export default App;

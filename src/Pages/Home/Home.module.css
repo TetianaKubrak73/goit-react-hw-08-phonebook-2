@@ -1,8 +1,17 @@
+body {
+  background: url(../../../public/depositphotos_8138619.jpg) no-repeat center
+    center fixed;
+}
 .container {
   display: flex;
   justify-content: center;
 }
 
 .title {
-  justify-content: center;
+  margin-top: 20px;
+  font-size: 46px;
+  color: #585757;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 3px 1px 3px #92949a;
 }

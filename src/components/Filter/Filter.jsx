@@ -11,9 +11,10 @@ const Filter = () => {
 
   return (
     <div className={style.filter}>
-      <label>
+      <label className={style.labelFilter}>
         Find contacts by name
         <input
+          className={style.inputFilter}
           type="text"
           value={filter}
           onChange={changeFilter}
