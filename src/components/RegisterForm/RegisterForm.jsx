@@ -47,8 +47,9 @@ const RegisterForm = ({ onSubmit }) => {
             id={nameId}
             type="text"
             name="name"
-            placeholder="Введіть ім'я"
-            pattern="^[^\d]+$"
+            placeholder="ім'я"
+            minLength={3}
+            // pattern="^[^\d]+$"
             required
           />
         </label>
@@ -62,8 +63,8 @@ const RegisterForm = ({ onSubmit }) => {
             id={emailId}
             type="email"
             name="email"
-            placeholder="Введіть адресу електронної пошти"
-            pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+            placeholder="vasha@poshta.tut"
+            pattern="^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$"
             required
           />
         </label>
@@ -77,7 +78,8 @@ const RegisterForm = ({ onSubmit }) => {
             id={passwordId}
             type="password"
             name="password"
-            placeholder="Введіть пароль"
+            placeholder="*******"
+            minLength={7}
             pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
             required
           />
