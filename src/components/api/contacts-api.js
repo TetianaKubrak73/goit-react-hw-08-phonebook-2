@@ -9,6 +9,6 @@ export const requestAddContacts = async body => {
   return data;
 };
 export const requestDeleteContacts = async id => {
-  const { data } = await authInstance.delete(`/contacts${id}`);
+  const { data } = await authInstance.delete(`/contacts/${id}`);
   return data;
 };
